@@ -18,7 +18,42 @@ code {
   flex-wrap: wrap;
 }
 
-.card-body {
-  background-color: #e6e6e6;
-  border: 1px solid black;
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
 }
+
+.card-body {
+  border: 1px solid limegreen;
+}
+
+
+.toggle {
+  background: #1a1a1a;
+  border-radius: 50px;
+  height: 18px;
+  left: 0;
+  position: absolute;
+  transition: 0.2s;
+  width: 20px;
+}
+
+.toggled {
+  left: 18px;
+}
+
+.dark-mode {
+  color:  #e6e6e6;
+  background-color: #1a1a1a;
+  border: 1px solid #e6e6e6;
+}
+
+.dark-mode__toggle {
+  background-color:#e6e6e6;
+  color: #1a1a1a;
+  border-radius: 40px;
+  border: 1px solid black;
+  height: 20px;
+  width: 40px;
+}
+

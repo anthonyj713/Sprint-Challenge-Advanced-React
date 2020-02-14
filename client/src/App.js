@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import Header from './components/Header';
 import PlayersCard from './components/PlayersCard';
 
 
@@ -29,11 +30,13 @@ class App extends React.Component {
   render(){
     return (
       <div className='bigContainer'>
-        {/* <div className='playerContainer'> */}
+      
+        <Header/>
+        <div className='cardContainer'>
         {this.state.playersData.map(
           (i) => <PlayersCard className='playersCard' data={i}/>
         ) } 
-        {/* </div> */}
+        </div>
       </div>
     );
   }
