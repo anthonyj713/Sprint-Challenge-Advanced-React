@@ -10,7 +10,7 @@ import {
         <Card>
           <CardBody>
             <CardTitle>{props.data.name}</CardTitle>
-            <CardSubtitle>{props.data.country}</CardSubtitle>
+            <CardSubtitle>Country: {props.data.country}</CardSubtitle>
             <CardText>Followers: {props.data.searches}</CardText>
           </CardBody>
         </Card>

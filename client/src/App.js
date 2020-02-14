@@ -28,10 +28,12 @@ class App extends React.Component {
 
   render(){
     return (
-      <div className='container'>
+      <div className='bigContainer'>
+        {/* <div className='playerContainer'> */}
         {this.state.playersData.map(
-          (i) => <PlayersCard data={i}/>
+          (i) => <PlayersCard className='playersCard' data={i}/>
         ) } 
+        {/* </div> */}
       </div>
     );
   }

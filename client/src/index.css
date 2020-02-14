@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.bigContainer {
+  width:100%;
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.card-body {
+  background-color: #e6e6e6;
+  border: 1px solid black;
+}
