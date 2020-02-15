@@ -9,13 +9,13 @@ const Header = () => {
   };
   return (
     <div className="header">
-      <h1>Women's World Cup</h1>
-      <div className="dark-mode__toggle">
-        <div
+      <h1>Womens World Cup</h1>
+      <button className="dark-mode__toggle">
+        <div className='button'
           onClick={toggleMode}
           className={darkMode ? 'toggle toggled' : 'toggle'}
         />
-      </div>
+      </button>
     </div>
   );
 };

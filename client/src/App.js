@@ -29,15 +29,16 @@ class App extends React.Component {
 
   render(){
     return (
-      <div className='bigContainer'>
-      
+      <body data-testid='body'>
+      <div className='bigContainer' >
         <Header/>
-        <div className='cardContainer'>
-        {this.state.playersData.map(
+          <div className='cardContainer'>
+          {this.state.playersData.map(
           (i) => <PlayersCard className='playersCard' data={i}/>
         ) } 
         </div>
       </div>
+      </body>
     );
   }
 }
