@@ -1,4 +1,4 @@
-body {
+body  {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -11,3 +11,51 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.bigContainer {
+  width:100%;
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-body {
+  border: 1px solid limegreen;
+}
+
+.dark-mode__toggle {
+  background-color:#e6e6e6;
+  color: #1a1a1a;
+  border-radius: 40px;
+  border: 1px solid black;
+  height: 20px;
+  width: 40px;
+}
+.toggle {
+  background: #1a1a1a;
+  border-radius: 50px;
+  height: 18px;
+  left: 0;
+  top: 82px;
+  position: absolute;
+  transition: 0.2s;
+  width: 20px;
+
+}
+
+.toggled {
+  left: 18px;
+}
+
+.dark-mode {
+  color:  #e6e6e6;
+  background-color: #1a1a1a;
+  border: 1px solid #e6e6e6;
+}
+
+
+
