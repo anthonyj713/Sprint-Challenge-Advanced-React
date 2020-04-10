@@ -15,12 +15,15 @@ test('renders header text', () => {
   getByText(/womens world cup/i);
 });
 
-test('renders light mode default', () => {
-  const { getByRole, getByTestId } = render(<App />);
-  const body = getByTestId(/body/i);
+test('button for light mode renders', () => {
+  const { getByRole } = render(<App />);
   expect(getByRole('button')).toBeInTheDocument();
-  // expect(getByTestId('body')).toHaveStyle('background-color: #e6e6e6');
 });
+
+// test('dark mode back ground is dark', () => {
+//   const { getByTestId } = render(<App />);
+//   expect(getByTestId('body')).toHaveStyle('background-color: #1a1a1a');
+// })
 
 // test('toggles dark mode' , () => {
 //   const { getByRole, getByTestId } = render(<App />);
@@ -31,3 +34,6 @@ test('renders light mode default', () => {
 //   fireEvent.click(toggleButton);
 //   expect(getByTestId('body')).toHaveStyle('background-color: #e6e6e6');
 // });
+
+
+

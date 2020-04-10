@@ -27,6 +27,6 @@ const App = () => {
       </div>
       </body>
     );
-          }
+  }
   
 export default App;
