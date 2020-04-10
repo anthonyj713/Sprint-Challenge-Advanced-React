@@ -1,46 +1,32 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Header from './components/Header';
 import PlayersCard from './components/PlayersCard';
 
-
-class App extends React.Component {
-  constructor() {
-    super();
-      this.state = {
-        playersData: []
-      };
-      console.log('constructor running');
-  };
-
-  componentDidMount(){
-    axios
-    .get('http://localhost:5000/api/players')
-    .then(response => {
-      this.setState({
-        playersData: response.data
-      });
-        console.log(response);
+const App = () => {
+  const [playersData, setPlayersData] = useState([]);
+  useEffect(() => {
+    axios.get('http://localhost:5000/api/players')
+    .then(res => {
+      setPlayersData(res.data);
     })
-    .catch(error => {
-      console.log('player data was not returned', error)
+    .catch(err => {
+      console.log('error', err)
     })
-  }
+   }, []);
 
-  render(){
-    return (
+  return (
       <body data-testid='body'>
       <div className='bigContainer' >
         <Header/>
           <div className='cardContainer'>
-          {this.state.playersData.map(
+          {playersData.map(
           (i) => <PlayersCard className='playersCard' data={i}/>
         ) } 
         </div>
       </div>
       </body>
     );
-  }
-}
-
+          }
+  
 export default App;

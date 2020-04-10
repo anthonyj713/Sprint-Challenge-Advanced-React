@@ -24,7 +24,8 @@ code {
 }
 
 .card-body {
-  border: 1px solid limegreen;
+  border: 2px solid limegreen;
+  margin: 1%;
 }
 
 .dark-mode__toggle {
